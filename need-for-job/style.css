@@ -1,0 +1,1305 @@
+/*!
+Theme Name: nfj
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: nfj
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+nfj is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none;
+}
+.wrap {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+/* ******************HEADER**************************** */
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+  color: #1e1e1e;
+  background: white;
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-x: hidden;
+}
+/* *************** HOME************** */
+.filter {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#home {
+  background: url(asset/img/background-cv.jpg) center;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+#home .title {
+  color: white;
+  z-index: 9999;
+  position: absolute; /* postulat de départ */
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+#home .title h1 {
+  font-size: 5rem;
+}
+#home .title h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+#home .title .btn-a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  border-radius: 0.3rem;
+  background-color: #ea4c88;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+}
+#home .filter img {
+  transform: scaleX(-1);
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+
+/************************** HEADER Thibault********** */
+header {
+  width: 100%;
+  z-index: 99999;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  background-color: #3b4148;
+}
+
+#masthead .site-branding {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+#masthead .header_img {
+  margin-left: 1rem;
+}
+#masthead .header_img img {
+  width: 60%;
+}
+#masthead .navigation ul {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+}
+#masthead .navigation a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  position: relative;
+}
+#masthead .navigation a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#masthead .navigation a:hover::before {
+  transform: scaleX(1);
+}
+#masthead .navigation {
+  display: flex;
+  margin: auto 0;
+}
+
+/*HOME RECRUTEUR*/
+#home_recruteur {
+  background: url("asset/img/background-recruteur2.jpg") center;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+#home_recruteur .title {
+  color: white;
+  z-index: 9999;
+  position: absolute; /* postulat de départ */
+  top: 50%;
+  left: 50%; /* à 50%/50% du parent référent */
+  transform: translate(-50%, -50%);
+  padding: 1rem;
+}
+
+#home_recruteur .title h1 {
+  font-size: 6rem;
+}
+#home_recruteur .title h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 4rem;
+}
+#home_recruteur .title .btn-a {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  padding: 1rem;
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  color: white;
+  border-radius: 0.3rem;
+  background-color: #5c068b;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+}
+#home_recruteur .filter img {
+  transform: scaleX(-1);
+  width: 15%;
+  position: absolute;
+  top: 50%;
+  right: 10%;
+}
+/*******************carte mathis***********************/
+
+/***************** card/slider ***********************/
+.filter2 {
+  transition: 0.5s;
+}
+.titre_card {
+  width: 100%;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+.separator_card {
+  height: 2px;
+  width: 40%;
+  background-color: black;
+  margin: 0 auto;
+}
+.titre_card h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-family: "Rowdies", "cursive";
+}
+.wrap_card {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  /* box-shadow: 1px 1px 16px 1px rgba(0, 0, 0, 0.75); */
+  border-radius: 5px;
+}
+
+#cards {
+  padding: 6rem;
+}
+
+.slideH {
+  padding: 1rem;
+  border-radius: 0.3rem;
+  background-color: #ea4c88;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 1rem;
+  color: white;
+  z-index: 99;
+}
+
+/*Register*/
+#register_form h2 {
+  font-family: "Rowdies", cursive;
+}
+#register_form .wrap_2 {
+  display: flex;
+  background-color: white;
+  height: 100vh;
+  color: white;
+}
+#register_form .wrapform {
+  width: 40%;
+  background-color: #2c3338;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+#register_form .img_part_register {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  gap: 6rem;
+}
+#register_form .box_part {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-around;
+}
+#register_form .separator {
+  border-bottom: solid 1px grey;
+  width: 100px;
+}
+#register_form .box_part .box {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 25%;
+  background: white;
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.21);
+  color: black;
+  padding: 1.5rem;
+  border-radius: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+#register_form .box_part .box i {
+  font-size: 5rem;
+  color: #ea4c88;
+}
+#register_form .info_box {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+#register_form .info_box input {
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border: 0;
+  background-color: #3b4148;
+  border-radius: 0.3rem;
+}
+
+#register_form .wrapform {
+  width: 40%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.rowdies {
+  font-family: "Rowdies", cursive;
+}
+
+.prenom {
+  margin-bottom: 0.5rem;
+}
+.phone {
+  margin-bottom: 0.5rem;
+}
+.email {
+  margin-bottom: 0.5rem;
+}
+#register_form .info_box_button {
+  padding-left: 2.5rem;
+}
+.shadow {
+  -webkit-box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.21);
+  border-radius: 10px;
+}
+#register_form .img_part_register {
+  background: center url("asset/img/background_login_register.jpg") no-repeat;
+}
+#register_form .img_part_register .title {
+  font-size: 2.5rem;
+}
+#register_form .error {
+  color: red;
+  text-align: center;
+  padding-top: 1rem;
+}
+#register_form .img_part_register h2 {
+  color: black;
+  font-family: "Rowdies", cursive;
+}
+#register_form .info_box_button input {
+  color: white;
+  background-color: #ea4c88;
+  padding: 1rem;
+  width: 200px;
+  cursor: pointer;
+}
+
+#register_form .info_box i {
+  font-size: 2rem;
+}
+.champsRequis {
+  color: #3b4148;
+}
+
+#register_form .error {
+  color: red;
+  text-align: center;
+  padding-bottom: 1rem;
+}
+#register_form .img_float1 {
+  width: 300px;
+  top: 200px;
+  left: 100px;
+  z-index: 2;
+}
+#register_form .img_float2 {
+  width: 300px;
+  top: 50px;
+  left: 175px;
+  z-index: 1;
+}
+#register_form .img_float3 {
+  width: 150px;
+  top: 240px;
+  left: 350px;
+  z-index: 3;
+}
+#register_form .img_float4 {
+  width: 350px;
+  top: 75px;
+  left: 350px;
+  z-index: 0;
+}
+
+/* Footer Mathis */
+
+#footer {
+  background-color: #3b4148;
+  padding: 2rem 0;
+}
+.wrap_footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+#footer .separator_footer {
+  background-color: #ea4c88;
+  width: 1px;
+  height: 100px;
+}
+
+#footer .footer_nav {
+  margin-right: 10%;
+  line-height: 2rem;
+}
+#footer .footer_nav a {
+  color: white;
+}
+#footer .footer_nav nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  position: relative;
+}
+#footer .footer_nav nav a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#footer .footer_nav nav a:hover::before {
+  transform: scaleX(1);
+}
+#footer .reseau_footer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 3rem;
+}
+#footer .reseau_footer a {
+  color: #ea4c88;
+  transition: 0.5s;
+}
+
+#footer .reseau_footer a:hover {
+  color: white;
+}
+#footer .fb:hover {
+  color: rgb(32, 171, 252);
+}
+#footer .insta:hover {
+  color: rgb(243, 87, 26);
+}
+#footer .snap:hover {
+  color: yellow;
+}
+
+/*Fin footer mathis*/
+
+/*Footer Recruteur*/
+#footer_recruteur {
+  background-color: #3b4148;
+  padding: 2rem 0;
+}
+.wrap_footer {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  gap: 2rem;
+}
+#footer_recruteur .separator_footer {
+  background-color: #5c068b;
+  width: 1px;
+  height: 100px;
+}
+
+#footer_recruteur .footer_nav {
+  margin-right: 10%;
+  line-height: 2rem;
+}
+#footer_recruteur .footer_nav a {
+  color: white;
+}
+#footer_recruteur .footer_nav nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  position: relative;
+}
+#footer_recruteur .footer_nav nav a::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+#footer_recruteur .footer_nav nav a:hover::before {
+  transform: scaleX(1);
+}
+#footer_recruteur .reseau_footer {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  font-size: 3rem;
+}
+#footer_recruteur .reseau_footer a {
+  color: #5c068b;
+}
+
+#footer_recruteur .reseau_footer a:hover {
+  color: white;
+}
+#footer_recruteur .fb:hover {
+  color: rgb(32, 171, 252);
+}
+#footer_recruteur .insta:hover {
+  color: rgb(243, 87, 26);
+}
+#footer_recruteur .snap:hover {
+  color: yellow;
+}
+
+/* Pub Thibault */
+#pub {
+  padding: 10rem 0;
+  background: no-repeat url("asset/img/fond.png");
+  background-size: cover;
+}
+
+#pub .pub_texte_titre {
+  text-align: center;
+  color: white;
+  font-size: 2.5rem;
+  font-family: "Rowdies", cursive;
+  margin-bottom: 2rem;
+}
+#pub p {
+  margin: 0 auto;
+  color: white;
+  text-align: center;
+  font-size: 1.3rem;
+  max-width: 800px;
+}
+/* Fin pub Thibault */
+
+/* Entreprise Thibault */
+
+#entreprise {
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+#entreprise .entreprise_text h2 {
+  font-size: 2rem;
+  text-align: center;
+  font-weight: 300;
+  font-family: "Rowdies", "cursive";
+}
+#entreprise .entreprises ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#entreprise .entreprises ul img {
+  width: 50%;
+}
+.entreprises {
+  margin-top: 4rem;
+}
+
+/* Fin Entreprise Thibault */
+
+/***************************** RECRUTEUR****************** */
+#recruteur {
+  padding: 2rem 0;
+}
+#recruteur .wrap_recruteur {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#recruteur .title_recru {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+#recruteur .title_recru h2 {
+  font-size: 3.2rem;
+
+  margin-bottom: 0.5rem;
+}
+#recruteur .title_recru h3 {
+  display: inline;
+  font-weight: 400;
+}
+
+.lastCV .result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.lastCV .result .left {
+  width: 30%;
+}
+
+.lastCV .result .searchbar {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+.lastCV .result .searchbar input {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  border: solid 1px #5c068b;
+  width: 60%;
+  text-align: center;
+}
+.lastCV .result label {
+  margin-right: 0.5rem;
+  font-size: 1.3rem;
+}
+.lastCV .result {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 3rem;
+}
+.lastCV .result .left {
+  font-size: 1.5rem;
+}
+.lastCV .result .left h2 {
+  font-weight: 300;
+  display: inline;
+  border-bottom: solid 2px #5c068b;
+}
+
+.cvs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.bloccv {
+  width: 49%;
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3b4148;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.cv_user .bloccv {
+  width: 49%;
+}
+.bloccv .cvImg {
+  width: 40%;
+}
+
+.list_cv {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+
+.nameSpan {
+  text-transform: uppercase;
+  color: #5c068b;
+}
+.bloccv .cvImg img {
+  cursor: pointer;
+  width: 50%;
+  border-radius: 0.3rem;
+}
+.bloccv .cvImg img:hover {
+  filter: grayscale(0.5);
+  transition: 0.5s;
+}
+.bloccv .cvDescription {
+  width: 60%;
+  display: flex;
+
+  justify-content: space-between;
+  flex-direction: column;
+}
+.bloccv .cvDescription h2 {
+  font-weight: 300;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: white;
+}
+.bloccv .cvDescription h3 {
+  font-weight: 300;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+.bloccv .cvDescription h2 span {
+  text-transform: uppercase;
+}
+.bloccv .cvDescription p {
+  font-size: 1.3rem;
+  margin-bottom: 3rem;
+}
+.bloccv .view {
+  color: white;
+  text-decoration: none;
+  padding: 1rem;
+  background-color: #5c068b;
+  width: 60%;
+  text-align: center;
+  border-radius: 0.3rem;
+}
+.bloccv .profil_cv_btn {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+
+.descriptionName {
+  text-transform: uppercase;
+}
+
+/* Presentation Thibault */
+
+#presentation {
+  padding-top: 7rem;
+}
+#presentation .wrap {
+  display: flex;
+  flex-flow: column;
+}
+#presentation p {
+  font-size: 1.2rem;
+  text-align: center;
+  gap: 0.5rem;
+}
+#presentation .presentation_titre {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-family: "Rowdies", cursive;
+}
+#presentation .presentation_box {
+  padding: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  border: solid #3b4148 2px;
+  border-radius: 5px;
+  /* -webkit-box-shadow: 3px 3px 5px 1px #3b4148;
+  box-shadow: 3px 3px 5px 1px #3b4148; */
+}
+#presentation .presentation_box2 {
+  margin-left: 50%;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background-color: white;
+  border: solid #3b4148 2px;
+  border-radius: 5px;
+  /* -webkit-box-shadow: -3px 3px 5px 1px #3b4148;
+  box-shadow: -3px 3px 5px 1px #3b4148; */
+}
+
+/*INFO RECRUTEUR*/
+#info_recruteur {
+  padding: 5rem;
+}
+#info_recruteur h2 {
+  font-family: "Rowdies", cursive;
+}
+#info_recruteur p {
+  font-family: "Lato", sans-serif;
+}
+#info_recruteur .info_box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+#info_recruteur .info_box .left_part_box {
+  display: flex;
+  flex-flow: column;
+  gap: 3rem;
+  width: 50%;
+}
+#info_recruteur .left_part_box .box {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1.5rem;
+  border: solid 2px black;
+  border-radius: 10px;
+  -webkit-box-shadow: -3px 3px 5px 1px #3b4148;
+  box-shadow: -3px 3px 5px 1px #3b4148;
+}
+#info_recruteur .left_part_box i {
+  font-size: 2rem;
+}
+#info_recruteur .info_box .left_part_box .box_txt {
+  display: flex;
+  flex-flow: column;
+  gap: 1rem;
+}
+#info_recruteur .info_box .right_part_box {
+  width: 30%;
+}
+#info_recruteur .info_box .right_part_box img {
+  width: 100%;
+}
+
+/* **************SELECT ************ */
+#select .wrap_select {
+  padding: 4rem 0;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+#select .wrap_select h2 {
+  font-family: "Rowdies", "cursive";
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#select .CVS {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 2rem;
+}
+#select .CVS .CV {
+  width: 23.33%;
+  -webkit-box-shadow: 2px 3px 7px 3px rgba(0, 0, 0, 0.28);
+  box-shadow: 2px 3px 7px 3px rgba(0, 0, 0, 0.28);
+}
+#select .CVS img {
+  width: 100%;
+  border-radius: 0.2rem;
+  flex-wrap: wrap;
+}
+
+#select .CV {
+  position: relative;
+}
+#select .discover {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: white;
+  background-color: #ea4c88;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+}
+#select .discoverTwo {
+  font-size: 1.3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+  color: white;
+  background-color: #ea4c88;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  border-radius: 0.3rem;
+  -webkit-box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+  box-shadow: 0px 8px 5px 0px rgba(0, 0, 0, 0.42);
+}
+
+.btnDiscover {
+  margin: 0 auto;
+  width: 50%;
+  text-align: center;
+  padding: 0.5rem;
+  background-color: #ea4c88;
+  border-radius: 0.3rem;
+}
+
+.btnDiscover a {
+  color: white;
+}
+.message {
+  z-index: 999;
+  display: none;
+}
+.popup {
+  border-radius: 0.3rem;
+  padding: 1rem;
+  color: white;
+  position: fixed;
+  background-color: #1e1e1e;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.popup h2 {
+  font-size: 2rem;
+}
+.popup p {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+.btnPop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.popup a {
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+}
+.popup .btnPop2 {
+  background-color: #ea4c88;
+  border-radius: 0.3rem;
+}
+/* Fin presentation Thibault */
+
+/* 404 Thibault */
+#introuvable {
+  padding: 12rem 0;
+  text-align: center;
+}
+#introuvable h1 {
+  font-family: "Rowdies", cursive;
+  font-size: 5rem;
+}
+#introuvable p {
+  font-size: 3rem;
+}
+/* Fin 404 Thibault */
+
+/* 403 Thibault */
+#autorisation {
+  padding: 12rem 0;
+  text-align: center;
+}
+#autorisation h1 {
+  font-family: "Rowdies", cursive;
+  font-size: 5rem;
+}
+#autorisation p {
+  font-size: 3rem;
+}
+/* Fin 403 Thibault */
+
+/*PROFIL*/
+#profil {
+  padding: 10rem;
+  background: rgba(0, 0, 0, 0.4) url("asset/img/bg.jfif");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+#profil .wrap .box_title {
+  padding: 2rem;
+  background-color: white;
+  border-radius: 5px;
+}
+#profil strong {
+  font-family: "Rowdies", cursive;
+}
+#profil .wrap {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 4rem;
+}
+
+#profil .box_profil {
+  display: flex;
+  -webkit-box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.3);
+}
+#profil .box_profil .box_profil_left {
+  width: 30%;
+  padding: 6rem;
+  background-color: mediumpurple;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 0.5rem 0 0 0.5rem;
+}
+#profil .box_profil .box_profil_left i {
+  font-size: 8rem;
+}
+#profil .box_profil .box_profil_right {
+  width: 70%;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 0 0.5rem 0.5rem 0;
+}
+#profil .cv_user {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*MENTIONS LEGALES*/
+#mentions .wrap {
+  display: flex;
+  flex-flow: column;
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+/* SINGLE */
+#single_blog {
+  padding: 2rem;
+  background-color: #1e1e1e;
+}
+.wrapBlog {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+
+.wrapBlog .left {
+  width: 45%;
+  color: white;
+  background-color: #2c3338;
+  border-radius: 0.3rem;
+  padding: 2rem;
+}
+.wrapBlog .left form {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  flex-direction: column;
+}
+.wrapBlog .left label {
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+.wrapBlog .left input {
+  background-color: #3b4148;
+  color: white;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: solid 1px #5c068b;
+}
+.wrapBlog .left button {
+  background-color: #5c068b;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  color: white;
+  cursor: pointer;
+  transition: 0.5s;
+  padding: 1rem;
+  border: none;
+}
+.wrapBlog .left button:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.wrapBlog .left textarea {
+  background-color: #3b4148;
+  border-radius: 0.3rem;
+  margin-bottom: 1rem;
+  border: solid 1px #5c068b;
+  font-family: "Lato";
+  color: white;
+  font-size: 1rem;
+}
+.wrapBlog .right {
+  border: none;
+  border-radius: 0.3rem;
+  width: 48%;
+  height: 400px;
+  overflow-y: scroll;
+}
+#cv_entier {
+  border-radius: 0.3rem;
+}
+.wrapBlog #lieux {
+  width: 300px;
+  height: 80px;
+  resize: none;
+  margin-bottom: 1rem;
+}
+/* FORMULAIRE */
+#formulaire1 {
+  display: flex;
+  flex-direction: column;
+}
+#formulaire2 {
+  display: none;
+  flex-direction: column;
+}
+#formulaire2 {
+  display: none;
+  flex-direction: column;
+}
+#formulaire3 {
+  display: none;
+}
+#formulaire3 input {
+  width: 100%;
+}
+#formulaire4 {
+  display: none;
+}
+#formulaire4 input {
+  width: 100%;
+}
+#formulaire5 {
+  display: none;
+}
+#formulaire5 input {
+  width: 100%;
+}
+#formulaire6 {
+  display: none;
+}
+#formulaire7 {
+  display: none;
+}
+#formulaire7 h2 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+#formulaire7 p {
+  margin-bottom: 6rem;
+}
+.download {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+}
+.btnADD {
+  border-radius: 0.3rem;
+  background-color: transparent;
+  color: white;
+  border: solid 2px #5c068b;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: 0.5s;
+}
+.btnADD:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgb(0 0 0 / 10%);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-download {
+  background-color: #5c068b;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+.btn-add {
+  background-color: #ea4c88;
+  margin-right: 1rem;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  color: white;
+}
+.btn-download:hover {
+  transition: 0.5s;
+  border: solid 1px #5c068b;
+  color: #5c068b;
+  background-color: transparent;
+}
+.btn-add:hover {
+  transition: 0.5s;
+  background-color: transparent;
+}
+/* ************CV DéTAIL */
+
+#cv_detail {
+  padding: 2rem;
+}
+#cv_detail .wrap {
+  padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#cv_detail .left {
+  text-align: center;
+  width: 49%;
+}
+#cv_detail .left h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-family: "Rowdies", "cursive";
+}
+#cv_detail .right {
+  overflow-y: scroll;
+  max-height: 400px;
+}
+/* CV */
+
+.wrapCV {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+/* .wrapCV .cv_entier {
+  width: 49%;
+  max-height: 500px;
+  overflow-y: scroll;
+} */
+.wrapCV .cvLeft {
+  width: 49%;
+  text-align: center;
+}
+#buttonAddProfile {
+  padding: 1.1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
